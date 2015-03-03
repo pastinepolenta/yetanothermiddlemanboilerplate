@@ -81,10 +81,12 @@ end
 #    sprockets.append_path File.join "#{root}", @bower_config["directory"]
 #end
 
+commit_message = `git log --pretty=oneline --abbrev-commit -n1`.strip
 activate :deploy do |deploy|
     deploy.method = :git
     deploy.build_before = true
     deploy.remote = "git@bitbucket.org:<yourrepo>.git"
     deploy.branch = "compiled"
+    deploy.commit_message = commit_message
 end
 
