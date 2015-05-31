@@ -14,8 +14,8 @@ Just because I wanted to have it my way
   - Clone this repo under ~/.middleman . It will be available as Middleman theme for any project you want
   - I assume you alredy have ruby installed
   - Run `cd /path/to/your/new/website`
-  - Run `middleman init --template=yetanothermiddlemanboilerplate`. During the install provide the sudo password to install the gems globally
-    or skip with control-c to install them under vendor/bundle (so they are inline with the current config)
+  - Run `middleman init -B --template=yetanothermiddlemanboilerplate`
+  - Run `bundle install --path=vendor/bundle` to install the required gems (they will be inline with the current config)
   - You might need to adjust `config.rb` to match your exact assets path to `vendor/bundle/something/something...`
   - Run `bundle exec middleman`
   - Go to http://localhost:4567, your website should be ready with all the SASS files compiled
