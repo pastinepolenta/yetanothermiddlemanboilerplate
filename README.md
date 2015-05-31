@@ -11,11 +11,11 @@ Just because I wanted to have it my way
 
 ## How to use (Linux/Unix)
 
-  - Go to an empty folder, which will be your website root folder
-  - Clone this repo in there, use option `--depth=1` if you don't need the repo history
-  - `rm -rf .git` if you don't need the repo history, you can init your git repo later
+  - Clone this repo under ~/.middleman . It will be available as Middleman theme for any project you want
   - I assume you alredy have ruby installed
-  - Run `bundle install --path vendor/bundle` to install the gems in the current folder (so they are inline with the current config)
+  - Run `cd /path/to/your/new/website`
+  - Run `middleman init --template=yetanothermiddlemanboilerplate`. During the install provide the sudo password to install the gems globally
+    or skip with control-c to install them under vendor/bundle (so they are inline with the current config)
   - You might need to adjust `config.rb` to match your exact assets path to `vendor/bundle/something/something...`
   - Run `bundle exec middleman`
   - Go to http://localhost:4567, your website should be ready with all the SASS files compiled
